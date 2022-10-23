@@ -11,3 +11,9 @@ module "network" {
     private_subnet_count = var.private_subnet_count
     private_subnet_cidr_block = var.private_subnet_cidr_block
 }
+
+module "static_site" {
+   source = "../common/static_site"
+   bucket_name = var.bucket_name
+   env = var.env
+}

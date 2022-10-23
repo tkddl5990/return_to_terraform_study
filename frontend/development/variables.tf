@@ -28,3 +28,8 @@ variable "private_subnet_cidr_block" {
   type = string
   description = "private subnet cidr_block"
 }
+
+variable "bucket_name" {
+  type = string
+  description = "s3 bucket name"
+}
