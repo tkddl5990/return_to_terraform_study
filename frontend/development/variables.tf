@@ -4,9 +4,9 @@
 # }
 
 variable "env" {
-    type = string
-    default = "development"
-    description = "develop environment"
+  type        = string
+  default     = "development"
+  description = "develop environment"
 }
 
 # variable "public_subnet_count" {
@@ -30,6 +30,6 @@ variable "env" {
 # }
 
 variable "bucket_name" {
-  type = string
+  type        = string
   description = "s3 bucket name"
 }
