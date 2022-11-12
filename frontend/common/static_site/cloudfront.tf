@@ -27,7 +27,7 @@ resource "aws_cloudfront_distribution" "distribution" {
   aliases             = ["${var.bucket_name}"]
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    # cloudfront_default_certificate = true
     # acm_certificate_arn = data.aws_acm_certificate.acm.arn
     minimum_protocol_version = "TLSv1.2_2021"
   }
