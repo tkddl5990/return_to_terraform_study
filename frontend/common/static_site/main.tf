@@ -6,13 +6,13 @@ resource "aws_s3_bucket" "s3" {
     }
 }
 
-# s3 버전 관리
-resource "aws_s3_bucket_versioning" "s3_version" {
-  bucket = aws_s3_bucket.s3.id
-  versioning_configuration {
-    status = "Disabled"
-  }
-}
+# # s3 버전 관리
+# resource "aws_s3_bucket_versioning" "s3_version" {
+#   bucket = aws_s3_bucket.s3.id
+#   versioning_configuration {
+#     status = "Disabled"
+#   }
+# }
 
 # s3 퍼블릭 엑세스 차단 여부
 resource "aws_s3_bucket_public_access_block" "s3_public_access" {
@@ -27,7 +27,7 @@ resource "aws_s3_bucket_public_access_block" "s3_public_access" {
 # s3 버킷 정책
 resource "aws_s3_bucket_policy" "s3_policy" {
     bucket = aws_s3_bucket.s3.id
-    policy = data.aws_iam_policy_document.s3_access_policy.json
+    policy = data.aws_iam_policy_document.s3_access_policy
 }
 
 # s3 버킷 정책 내용 data
