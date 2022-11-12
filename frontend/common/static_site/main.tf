@@ -27,7 +27,7 @@ resource "aws_s3_bucket_public_access_block" "s3_public_access" {
 # s3 버킷 정책
 resource "aws_s3_bucket_policy" "s3_policy" {
     bucket = aws_s3_bucket.s3.id
-    policy = data.aws_iam_policy_document.s3_access_policy
+    policy = data.aws_iam_policy_document.s3_access_policy.json
 }
 
 # s3 버킷 정책 내용 data
