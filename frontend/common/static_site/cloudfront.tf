@@ -24,7 +24,7 @@ resource "aws_cloudfront_distribution" "distribution" {
   is_ipv6_enabled     = true
   comment             = "이것은 배포여"
   default_root_object = "index.html"
-  aliases             = ["${var.bucket_name}"]
+#   aliases             = ["${var.bucket_name}"]
 
   viewer_certificate {
     # cloudfront_default_certificate = true
