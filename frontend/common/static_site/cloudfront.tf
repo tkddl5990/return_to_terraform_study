@@ -29,7 +29,7 @@ resource "aws_cloudfront_distribution" "distribution" {
   viewer_certificate {
     cloudfront_default_certificate = true
     # acm_certificate_arn = data.aws_acm_certificate.acm.arn
-    minimum_protocol_version = "TLSv1.2_2021"
+    # minimum_protocol_version = "TLSv1.2_2021"
   }
 
   # 로깅 관련
